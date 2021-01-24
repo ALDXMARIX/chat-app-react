@@ -8,10 +8,12 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header/> 
-        <Container /> 
 
+        <Header/> 
         <Container> 
+
+        <Container/> 
+
       </React.Fragment>
     );
   }
