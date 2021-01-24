@@ -11,7 +11,7 @@ class App extends Component {
         <Header/> 
         <Container /> 
 
-        <Container/> 
+        <Container> 
       </React.Fragment>
     );
   }
