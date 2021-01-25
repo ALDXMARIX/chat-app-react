@@ -1,17 +1,34 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
+import axios from "axios";
 
 class LiveVisitors extends Component {
 
   state = {
-    visitors: [
-      {
-        ip:"localhost",
-        city:"Manila",
-        state:"NCR",
-        country:"Philippines"
-      }
-    ]
+    visitors: []
+  }
+
+  componentWillMount() {
+    axios.get('http://geoplugin.net/json.gp').then(res => {
+      const {
+        geoplugin_request,
+        geoplugin_countryCode,
+        geoplugin_city,
+        geoplugin_region,
+        geoplugin_countryName
+      } = res.data;
+      const visitor = {
+        ip: geoplugin_request,
+        countrycode: geoplugin_countryCode,
+        city: geoplugin_city,
+        state: geoplugin_region,
+        country: geoplugin_countryName
+      } 
+ 
+      this.setState({
+        visitors: [visitor]
+      })     
+    });
   }
 
   renderTableBody = () => {
@@ -21,7 +38,7 @@ class LiveVisitors extends Component {
         <tr>
           <th>{index}</th>
           <td>{v.ip}</td>
-          <td>{v.country}</td>
+          <td>{v.countrycode}</td>
           <td>{v.city}</td>
           <td>{v.state}</td>
           <td>{v.country}</td>
