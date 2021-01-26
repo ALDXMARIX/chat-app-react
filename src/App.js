@@ -14,9 +14,6 @@ class App extends Component {
           <Row>
             <LiveVisitors/>
           </Row>
-          <Row>
-            <LiveVisitors/>
-          </Row>
         <Container/> 
       </React.Fragment>
     );
