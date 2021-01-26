@@ -1,31 +1,18 @@
 {
-<<<<<<< HEAD
-  "name": "chat-app-server",
-  "version": "0.0.1",
-  "description": "server-chat-app",
-  "main": "index.js",
-=======
   "name": "chat-app",
   "version": "0.0.1",
   "description": "a sample chat app",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1",
+    "nodemon": "^2.0.7",
     "socket.io": "^3.1.0"
   },
   "devDependencies": {},
->>>>>>> main
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
   },
   "author": "me",
-<<<<<<< HEAD
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "socket.io": "^3.1.0"
-  }
-=======
   "license": "ISC"
->>>>>>> main
 }
