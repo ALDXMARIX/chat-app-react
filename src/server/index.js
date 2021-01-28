@@ -157,7 +157,7 @@ io.on("connection", function (socket) {
   socket.on('SET_CLIENT_DATA', function (clientdata) {
     // here we receive data from frontend, and add it to the serverside reference
     store[socket.id].data = clientdata;
-    
+ 
     // once a socket updates his custom client data
     // emit all custom data to all clients
     io.emit('ALL_CONNECTED_CLIENTS', Object.values(store).map(e => e.data));
@@ -170,7 +170,7 @@ io.on("connection", function (socket) {
 
 
 
-  socket.join("room1");
+  // socket.join("room1");
   console.log("a user connected");
 
   socket.on("new_visitor", user => {

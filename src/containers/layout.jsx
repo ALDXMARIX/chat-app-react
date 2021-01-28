@@ -1,6 +1,6 @@
-import React, { Component } from "./node_modules/react";
-import { Container, Row } from "./node_modules/reactstrap";
-import { Route, Switch } from "./node_modules/react-router-dom";
+import React, { Component } from "react";
+import { Container, Row } from "reactstrap";
+import { Route, Switch } from "react-router-dom";
 
 import Header from "../components/Header";
 
